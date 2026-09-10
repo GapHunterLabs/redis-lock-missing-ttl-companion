@@ -4,6 +4,12 @@ Warning on a `SET ... NX` call (Jedis's `SetParams.nx()`/Lettuce's
 `SetArgs.Builder.nx()` manual distributed-lock pattern) with no
 `EX`/`PX` expiry chained onto the same builder.
 
+## Screenshots
+
+![Screenshot 1](docs/screenshots/Screenshot_1.png)
+
+![Screenshot 2](docs/screenshots/Screenshot_2.png)
+
 ## Why it exists
 
 A lock acquired this way never expires on its own if the process
