@@ -1,0 +1,10 @@
+<html>
+<body>
+Reports a manual Redis lock taken with <code>SET ... NX</code> (Jedis <code>SetParams.nx()</code> or Lettuce
+<code>SetArgs.Builder.nx()</code>) with no <code>EX</code> or <code>PX</code> expiry on the same call.
+<!-- tooltip end -->
+<p>If the process holding the lock crashes before releasing it, the lock never expires and blocks every other
+caller. Redisson <code>RLock.lock()</code> without a lease time is not reported: its watchdog renews the lock while
+the holder is alive and lets it expire if the holder dies.</p>
+</body>
+</html>
